@@ -23,6 +23,8 @@ services:
       context: ./.docker/frontend/
     volumes:
       - ./frontend:/app
+    environment:
+      - API_URL=http://172.45.101.10/api/
     networks:
       stockpress_network:
         ipv4_address: 172.45.101.11
